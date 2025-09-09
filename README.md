@@ -58,7 +58,9 @@
 
 1️⃣ 프로젝트 클론  
 
-git clone https://github.com/your-username/your-repository.git
+[git clone](https://github.com/your-username/your-repository.git)
+
+
 2️⃣ 가상환경 생성 및 활성화
 
 ```
