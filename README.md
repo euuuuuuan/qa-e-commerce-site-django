@@ -21,6 +21,52 @@
 
 ---
 
+### 🖼️ 구현된 웹 페이지 미리보기
+
+아래는 Django 기반으로 구현한 온라인 쇼핑몰 웹사이트의 주요 화면입니다.  
+각 화면은 실제 Playwright 자동화 테스트 대상(SUT)으로 사용되었습니다.
+
+#### 🏠 메인 페이지
+<img src="https://github.com/euuuuuuan/qa-e-commerce-site-django/blob/main/docs/screenshots/landing_page.png" alt="랜딩 페이지" width="300"/>
+
+#### 👕 상품 상세 페이지
+<img src="https://github.com/euuuuuuan/qa-e-commerce-site-django/blob/main/docs/screenshots/detail_page.png" alt="상세 페이지" width="300"/>
+
+#### 🛒 장바구니 페이지
+<img src="https://github.com/euuuuuuan/qa-e-commerce-site-django/blob/main/docs/screenshots/cart_page.png" alt="장바구니 페이지" width="300"/>
+
+#### 💳 주문 완료 페이지
+<img src="https://github.com/euuuuuuan/qa-e-commerce-site-django/blob/main/docs/screenshots/order_completed_page.png" alt="주문완료 페이지" width="300"/>
+
+#### 📝 회원가입 페이지
+<img src="https://github.com/euuuuuuan/qa-e-commerce-site-django/blob/main/docs/screenshots/register_page.png" alt="회원가입 페이지" width="300"/>
+
+#### ⚙️ 관리자 페이지
+<img src="https://github.com/euuuuuuan/qa-e-commerce-site-django/blob/main/docs/screenshots/admin_page.png" alt="관리자 페이지" width="300"/>
+
+#### 📝 관리자 페이지 각종 정보확인
+1) 계정 정보
+<img src="https://github.com/euuuuuuan/qa-e-commerce-site-django/blob/main/docs/screenshots/account_info.png" alt="계정 정보" width="300"/>
+
+
+2) 장바구니 정보
+<img src="https://github.com/euuuuuuan/qa-e-commerce-site-django/blob/main/docs/screenshots/cart_info.png" alt="장바구니 정보" width="300"/>
+
+
+3) 주문내역 정보
+<img src="https://github.com/euuuuuuan/qa-e-commerce-site-django/blob/main/docs/screenshots/ordered_info.png" alt="주문내역 정보" width="300"/>
+
+
+4) 상품 정보
+<img src="https://github.com/euuuuuuan/qa-e-commerce-site-django/blob/main/docs/screenshots/prod_info.png" alt="상품 정보" width="300"/>
+
+
+
+
+
+
+---
+
 ### 💡 기술적 성과 및 문제 해결
 - ⚙️ **Django MTV 아키텍처 이해**: Model, Template, View를 활용한 웹 서비스 구조 설계  
 - 🛠️ **문제 해결 경험**  
@@ -114,6 +160,7 @@ clothing-mall-project/
  ┃ ┣ urls.py
  ┃ ┗ views.py
  ┣ 📂 venv/                    # 가상 환경
+ ┣ 📂 docs/screenshots/
  ┣ db.sqlite3
  ┗ manage.py
 ```
