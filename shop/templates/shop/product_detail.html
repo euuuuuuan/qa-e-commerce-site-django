@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ product.name }}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'shop/style.css' %}">
+</head>
+
+<body>
+    <header>
+        <div class="logo">유안네 옷장</div>
+        <nav>
+            {% if user.is_authenticated %}
+            <span>오늘도 유안하세요!, {{ user.username }}님!</span>
+            <a href="{% url 'landing_page' %}">홈</a>
+            <a href="{% url 'cart_detail' %}">장바구니</a>
+            <a href="{% url 'logout_user' %}">로그아웃</a>
+            {% else %}
+            <a href="{% url 'landing_page' %}">홈</a>
+            <a href="{% url 'login_page' %}">로그인</a>
+            <a href="{% url 'register_page' %}">회원가입</a>
+            {% endif %}
+        </nav>
+    </header>
+
+    <main class="product-detail-container">
+        <img src="{{ product.image.url }}" alt="{{ product.name }}">
+        <div>
+            <h2>{{ product.name }}</h2>
+            <p class="price">{{ product.price }}원</p>
+            <p class="description">{{ product.description }}</p>
+            <form action="{% url 'add_to_cart' product.id %}" method="post">
+                {% csrf_token %}
+                <input type="hidden" name="quantity" value="1">
+                <button type="submit">장바구니에 담기</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 유안네 옷장. All Rights Reserved.</p>
+    </footer>
+</body>
+
+</html>

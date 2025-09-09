@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'shop/style.css' %}">
+</head>
+
+<body>
+    <header>
+        <div class="logo">유안네 옷장</div>
+        <nav>
+            <a href="{% url 'landing_page' %}">홈</a>
+            <a href="{% url 'login_page' %}">로그인</a>
+            <a href="{% url 'register_page' %}">회원가입</a>
+        </nav>
+    </header>
+
+    <main class="register-container">
+        <h2>회원가입</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">가입하기</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 유안네 옷장. All Rights Reserved.</p>
+    </footer>
+</body>
+
+</html>

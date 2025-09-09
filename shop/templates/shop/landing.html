@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>👕의류 쇼핑몰</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'shop/style.css' %}">
+</head>
+
+<body>
+    <header>
+        <div class="logo">유안네 옷장</div>
+        <nav>
+            {% if user.is_authenticated %}
+            <span>오늘도 유안하세요!, {{ user.username }}님!</span>
+            <a href="{% url 'landing_page' %}">홈</a>
+            <a href="{% url 'cart_detail' %}">장바구니</a>
+            <a href="{% url 'logout_user' %}">로그아웃</a>
+            {% else %}
+            <a href="{% url 'landing_page' %}">홈</a>
+            <a href="{% url 'login_page' %}">로그인</a>
+            <a href="{% url 'register_page' %}">회원가입</a>
+            {% endif %}
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <h1>여름 신상 컬렉션</h1>
+            <p>트렌디한 스타일로 당신의 여름을 완성하세요.</p>
+            <button>더 알아보기</button>
+        </section>
+
+        <section class="product-list">
+            <!-- <h2>베스트 셀러</h2> -->
+            <div class="products">
+                {% for product in products %}
+                <div class="product-item">
+                    <a href="{% url 'product_detail' product.id %}">
+                        <img src="{{ product.image.url }}" alt="{{ product.name }}">
+                        <h3>{{ product.name }}</h3>
+                    </a>
+                    <p>{{ product.price }}원</p>
+                    <form method="post" action="{% url 'add_to_cart' product.id %}">
+                        {% csrf_token %}
+                        <input type="hidden" name="quantity" value="1">
+                        <button type="submit">장바구니에 담기</button>
+                    </form>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 유안네 옷장. All Rights Reserved.</p>
+    </footer>
+</body>
+
+</html>

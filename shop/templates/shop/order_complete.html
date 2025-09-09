@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주문 완료</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'shop/style.css' %}">
+</head>
+
+<body>
+    <header>
+        <div class="logo">유안네 옷장</div>
+        <nav>
+            {% if user.is_authenticated %}
+            <span>오늘도 유안하세요!, {{ user.username }}님!</span>
+            <a href="{% url 'landing_page' %}">홈</a>
+            <a href="{% url 'cart_detail' %}">장바구니</a>
+            <a href="{% url 'logout_user' %}">로그아웃</a>
+            {% else %}
+            <a href="{% url 'landing_page' %}">홈</a>
+            <a href="{% url 'login_page' %}">로그인</a>
+            <a href="{% url 'register_page' %}">회원가입</a>
+            {% endif %}
+        </nav>
+    </header>
+
+    <main class="order-complete-container">
+        <h2>주문이 완료되었습니다!</h2>
+        <p>구매해 주셔서 감사합니다. 곧 상품이 배송될 예정입니다.</p>
+        <a href="{% url 'landing_page' %}">홈으로 돌아가기</a>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 유안네 옷장. All Rights Reserved.</p>
+    </footer>
+</body>
+
+</html>

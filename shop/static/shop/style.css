@@ -1,0 +1,257 @@
+/* style.css */
+
+/* 기본 설정 */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* 헤더 및 내비게이션 바 */
+header {
+    background-color: #fff;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 환영 메시지 스타일 */
+.welcome-message {
+    font-size: 1rem;
+    color: #333;
+    font-weight: bold;
+    justify-content: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+/* 환영 메시지 스타일 */
+nav span {
+    font-size: 0.8rem;
+    color: #333;
+    font-weight: bold;
+}
+
+nav a {
+    text-decoration: none;
+    color: #555;
+    margin-left: 1.5rem;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #007bff;
+}
+
+/* 메인 컨테이너 */
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* 상품 목록 */
+.product-list {
+    text-align: center;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    /* 창 크기가 줄어들면 줄바꿈 처리 */
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.product-item {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+
+}
+
+.product-item img {
+    max-width: 100%;
+    border-radius: 8px;
+
+}
+
+.product-item h3 {
+    margin: 1rem 0 0.5rem;
+}
+
+.product-item p {
+    color: #888;
+}
+
+/* 상품 상세 페이지 */
+.product-detail-container {
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    max-width: 500px;
+    margin: 4rem auto 2rem auto;
+    justify-content: center;
+}
+
+
+.product-detail-container img {
+    max-width: 400px;
+    border-radius: 8px;
+}
+
+.product-detail-container .price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #007bff;
+    margin: 1rem 0;
+}
+
+/* 장바구니 페이지 */
+.cart-container {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cart-items-list {
+    list-style: none;
+    padding: 0;
+}
+
+.cart-items-list li {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding: 1rem 0;
+}
+
+.cart-items-list img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-right: 1.5rem;
+}
+
+.cart-summary {
+    text-align: right;
+    margin-top: 2rem;
+    border-top: 2px solid #333;
+    padding-top: 1rem;
+}
+
+.cart-summary h3 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+/* 로그인/회원가입 페이지 */
+.login-container {
+    max-width: 400px;
+    margin: 4rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+    text-align: left;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 버튼 스타일 */
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* 폼 스타일 */
+form input,
+form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* 푸터 */
+footer {
+    text-align: center;
+    padding: 0.1rem;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* 회원가입 페이지 컨테이너 */
+.register-container {
+    max-width: 400px;
+    margin: 4rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* 폼 그룹 (라벨과 입력 필드) */
+.form-group {
+    margin-bottom: 1rem;
+    text-align: left;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 입력 필드 스타일 */
+form input,
+form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}

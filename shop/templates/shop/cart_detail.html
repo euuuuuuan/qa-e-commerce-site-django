@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>장바구니</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'shop/style.css' %}">
+</head>
+
+<body>
+    <header>
+        <div class="logo">유안네 옷장</div>
+        <nav>
+            {% if user.is_authenticated %}
+            <span>오늘도 유안하세요!, {{ user.username }}님!</span>
+            <a href="{% url 'landing_page' %}">홈</a>
+            <a href="{% url 'cart_detail' %}">장바구니</a>
+            <a href="{% url 'logout_user' %}">로그아웃</a>
+            {% else %}
+            <a href="{% url 'landing_page' %}">홈</a>
+            <a href="{% url 'login_page' %}">로그인</a>
+            <a href="{% url 'register_page' %}">회원가입</a>
+            {% endif %}
+        </nav>
+    </header>
+
+    <main class="cart-container">
+        <h2>장바구니</h2>
+        {% if cart_items %}
+        <ul class="cart-items-list">
+            {% for item in cart_items %}
+            <li>
+                <img src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                <div class="item-details">
+                    <h3>{{ item.product.name }}</h3>
+                    <p>{{ item.product.price|floatformat:0 }}원</p>
+
+                    <form action="{% url 'cart_update' item.id %}" method="post">
+                        {% csrf_token %}
+                        <label for="quantity-{{ item.id }}">수량:</label>
+                        <input type="number" id="quantity-{{ item.id }}" name="quantity" value="{{ item.quantity }}"
+                            min="1">
+                        <button type="submit">수량 변경</button>
+                    </form>
+
+                    <form action="{% url 'cart_remove' item.id %}" method="post">
+                        {% csrf_token %}
+                        <button type="submit">삭제</button>
+                    </form>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+        <div class="cart-summary">
+            <h3>총액: {{ total_price|floatformat:0 }}원</h3>
+            <form action="{% url 'create_order' %}" method="post">
+                {% csrf_token %}
+                <button>결제하기</button>
+        </div>
+        {% else %}
+        <p>장바구니가 비어있습니다.</p>
+        {% endif %}
+    </main>
+
+    <footer>
+        <p>&copy; 2025 유안네 옷장. All Rights Reserved.</p>
+    </footer>
+</body>
+
+</html>
