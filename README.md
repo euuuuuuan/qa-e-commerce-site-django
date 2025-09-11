@@ -9,7 +9,7 @@
 동시에 **Playwright 기반 웹 자동화 테스트**를 적용하기 위해 설계되었습니다.  
 
 👉 기존의 공개된 웹사이트가 아닌, **제가 직접 제작한 서비스 환경에서 QA 자동화 테스트를 해보고 싶다는 탐구심으로 제작**했다는 점이 가장 큰 특징입니다.
-*연계 프로젝트: ![qa-automation-playwright](https://github.com/euuuuuuan/qa-automation-playwright)
+*연계 프로젝트: [qa-automation-playwright](https://github.com/euuuuuuan/qa-automation-playwright)
 
 ---
 
