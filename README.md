@@ -30,7 +30,7 @@
 각 화면은 실제 Playwright 자동화 테스트 대상(SUT)으로 사용되었습니다.
 
 #### 🏠 메인 페이지
-<img src="../landing_page.png" alt="랜딩 페이지" width="300"/>
+<img src="../docs/screenshots/landing_page.png" alt="랜딩 페이지" width="300"/>
 
 #### 👕 상품 상세 페이지
 <img src="https://github.com/euuuuuuan/qa-e-commerce-site-django/blob/main/docs/screenshots/detail_page.png" alt="상세 페이지" width="300"/>
