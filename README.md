@@ -33,10 +33,10 @@
 <img src="https://github.com/user-attachments/assets/2f5ec65a-5c50-420c-8451-461155384a85" alt="랜딩 페이지" width="300"/>
 
 #### 👕 상품 상세 페이지
-<img src="https://github.com/euuuuuuan/qa-e-commerce-site-django/blob/main/docs/screenshots/detail_page.png" alt="상세 페이지" width="300"/>
+<img src="https://github.com/user-attachments/assets/24f2adf3-7b2e-481f-b17b-ec2a763b87fd" alt="상세 페이지" width="300"/>
 
 #### 🛒 장바구니 페이지
-<img src="https://github.com/euuuuuuan/qa-e-commerce-site-django/blob/main/docs/screenshots/cart_page.png" alt="장바구니 페이지" width="300"/>
+<img src="https://github.com/user-attachments/assets/c11762d9-3302-437a-88d2-6f65160cec1c" alt="장바구니 페이지" width="300"/>
 
 #### 💳 주문 완료 페이지
 <img src="https://github.com/euuuuuuan/qa-e-commerce-site-django/blob/main/docs/screenshots/order_completed_page.png" alt="주문완료 페이지" width="300"/>
